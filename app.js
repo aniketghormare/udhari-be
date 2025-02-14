@@ -16,6 +16,10 @@ app.use(cookieParser() );
 app.use("/auth",userRouter)
 app.use("/user",udharRouter)
 
+app.get("/",(req,res)=>{
+    res.json({msg:"Home page"})
+})
+
 let PORT=process.env.PORT  || 8000
 app.listen(PORT,async()=>{
     await connection
