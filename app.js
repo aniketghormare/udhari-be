@@ -16,7 +16,7 @@ app.use(cookieParser() );
 app.use("/auth",userRouter)
 app.use("/user",udharRouter)
 
-app.get("/",(req,res)=>{
+app.get("/api/get",(req,res)=>{
    return res.json({msg:"Home page"})
 })
 
